@@ -1,20 +1,20 @@
 <header id="header" class="title-header">
   <div class="logo">
-    <%= image_tag('LogoMakr_3O1FKu.png', alt: 'LOGO') %>
-    <!-- img src="LogoMakr_3O1FKu.png" alt="logo" href="#title" /   -->
+    <%= link_to root_path do %>
+      <%= image_tag('LogoMakr_3O1FKu.png', alt: 'LOGO') %>
+    <% end %>
   </div>
   <div class="divider"></div>
   <div id="title" class="title">Standard Library Documentation</div>
 </header>
 <nav id="navbar" role="navigation">
   <div class="menu-toggle">
-  <label for="toggle" class="nav-toggle-label">
-    <span></span>
-  </label>
-  <input type="checkbox" id="toggle" class="nav-toggle" />
+    <label for="toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <input type="checkbox" id="toggle" class="nav-toggle" />
     <ul id="menu">
       <li><%= link_to "Nosotros", root_path(anchor: "cuarta"), class: 'nav-link' %></li>
-      <a class="nav-link" href='#nosotros'><li>Nosotros</li></a>
       <a class="nav-link" href='#servicios'><li>Servicios</li></a>
       <a class="nav-link" href='#celapp'><li>Applicacion</li></a>
       <a class="nav-link" href='#comienza'><li>Conoce Más</li></a>
@@ -23,3 +23,4 @@
     <div class="separator"><span></span></div>
   </div>
 </nav>
+
