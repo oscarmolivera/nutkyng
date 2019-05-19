@@ -28,128 +28,129 @@
     font-family: 'Sarabun', sans-serif;
     font-weight: 300;
   }
+  @media (min-width: 285px){
+    .logo {
+      margin-top: 10px;
+      padding-left: 60px;
+      padding-top: 10 px;
+    }
+    
+    .logo img {
+      height: 65px;
+    }
 
-  .logo {
-    margin-top: 10px;
-    padding-left: 60px;
-    padding-top: 10 px;
+    .title {
+      display: none;
+    }
+
+    /* Navegation bar */ // All items contains in Menu Hamburger occult
+  .menu-toggle input,
+  .menu-toggle ul,
+  .separator span{
+    display: none; 
   }
-  
-  .logo img {
-    height: 65px;
+  .nav-toggle:checked ~ ul,  //When clicked it shows
+  .nav-toggle:checked ~ .separator span{
+    display: block; 
   }
 
-  .title {
-    display: none;
+  /*Gray area showned when click Hamburger*/
+  .menu-toggle ul{
+    position: absolute;
+    width: 305px;
+    top:80px;
+    height: 87vh;
+    z-index:2;
+  }
+  .menu-toggle ul::before{
+    content: '';
+    position: absolute;
+    top:.0em;
+    bottom: -.15em;
+    left: 100%;
+    width: 0rem;
+    height: 87vh;
+    background: rgba(23, 58, 134, 0.35);
+    z-index:3;
+  }
+  .menu-toggle ul::after{
+    content: '';
+    position: absolute;
+    top:150px;
+    bottom: 5%;
+    height: .5px;
+    width: 40px;
+
+  }/*Hamburguer menu btn config*/
+  .nav-toggle-label{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after{
+    display: block;
+    background: var(--nkBlue);
+    height: 4.5px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+  }
+  .nav-toggle-label span::before{
+    bottom: 8px;
+  }
+  .nav-toggle-label span::after{
+    top: 8px;
+  }
+  #menu{
+    list-style: none;
+    margin-left: 0px;
+    padding: 5px 0 0 0 ;
+    line-height: .1em;
+    background: white;
+  }
+  #menu li{
+    padding-top: .8em;
+    padding-left: 1.3em;
+    padding-bottom: .7em;
+  }
+  #menu li:hover, 
+  #menu li:hover > a {
+    background: #DDDDDD;
+    color: #FF851B;
+  }
+  #menu li a:hover, 
+  #menu li.active a{
+    background: #DDDDDD;
+    color: #FF851B;
+  }
+  .nav-link{
+    text-decoration: none;
+    font-size: 1em;
+    color:#111111;
   }
 
-  /* Navegation bar */ // All items contains in Menu Hamburger occult
-.menu-toggle input,
-.menu-toggle ul,
-.separator span{
-  display: none; 
-}
-.nav-toggle:checked ~ ul,  //When clicked it shows
-.nav-toggle:checked ~ .separator span{
-  display: block; 
-}
-
-/*Gray area showned when click Hamburger*/
-.menu-toggle ul{
-  position: absolute;
-  width: 305px;
-  top:80px;
-  height: 87vh;
-  z-index:2;
-}
-.menu-toggle ul::before{
-  content: '';
-  position: absolute;
-  top:.0em;
-  bottom: -.15em;
-  left: 100%;
-  width: 0rem;
-  height: 87vh;
-  background: rgba(23, 58, 134, 0.35);
-  z-index:3;
-}
-.menu-toggle ul::after{
-  content: '';
-  position: absolute;
-  top:150px;
-  bottom: 5%;
-  height: .5px;
-  width: 40px;
-
-}/*Hamburguer menu btn config*/
-.nav-toggle-label{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin-left: 1.8em;
-  margin-right: 1.8em;
-  height: 72px;
-  display: flex;
-  align-items: center;
-}
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after{
-  display: block;
-  background: var(--nkBlue);
-  height: 4.5px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-.nav-toggle-label span::before,
-.nav-toggle-label span::after{
-  content: '';
-  position: absolute;
-}
-.nav-toggle-label span::before{
-  bottom: 8px;
-}
-.nav-toggle-label span::after{
-  top: 8px;
-}
-#menu{
-  list-style: none;
-  margin-left: 0px;
-  padding: 5px 0 0 0 ;
-  line-height: .1em;
-  background: white;
-}
-#menu li{
-  padding-top: .8em;
-  padding-left: 1.3em;
-  padding-bottom: .7em;
-}
-#menu li:hover, 
-#menu li:hover > a {
-  background: #DDDDDD;
-  color: #FF851B;
-}
-#menu li a:hover, 
-#menu li.active a{
-  background: #DDDDDD;
-  color: #FF851B;
-}
-.nav-link{
-  text-decoration: none;
-  font-size: 1em;
-  color:#111111;
-}
-
-.separator span{
-  position: absolute;
-  top:545px;
-  z-index: 25;
-  padding-left: .1em;
-  border-top: .5px solid #d3d3d3;
-  padding-top: 5px;
-  width: 245px;
-  margin:0 .5em 0 .5em;
-  color: #303030;
-  text-align: center;
+  .separator span{
+    position: absolute;
+    top:545px;
+    z-index: 25;
+    padding-left: .1em;
+    border-top: .5px solid #d3d3d3;
+    padding-top: 5px;
+    width: 245px;
+    margin:0 .5em 0 .5em;
+    color: #303030;
+    text-align: center;
+  }
 }
